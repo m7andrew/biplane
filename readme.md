@@ -43,7 +43,7 @@ Simple routing:
 
 (def routes
   [(GET '("/hello/" :string) hello)
-   (GET '(:any) not-found)]
+   (GET '(:any) not-found)])
 
 (defn app [req]
   (route req routes))
