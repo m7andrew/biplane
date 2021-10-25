@@ -8,7 +8,7 @@
       :value (some (sequence (not "&") 1))}))
 
 (defn decode [str]
-  (struct ;(peg/match $form str)))
+  (when str (struct ;(peg/match $form str))))
 
 (defn encode [dict]
   (defn pair [[k v]] (string/format "%s=%s" (url/escape k) (url/escape v)))
